@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Quince - Premium luxury e-commerce for cashmere, linen, bags, and more.">
+  <title>Quince | Luxury Fashion &amp; Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&amp;display=swap" rel="stylesheet">
+  <style>
+    .logo-text {
+      font-family: "EB Garamond", Georgia, serif;
+      font-size: 28px;
+    }
+    .footer-logo-text {
+      font-family: "EB Garamond", Georgia, serif;
+    }
+    .hero-content h2 {
+      font-family: "EB Garamond", Georgia, serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="announcement-bar" role="banner">
+    <p>Free shipping &amp; easy returns for 365 days.</p>
+  </div>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <a href="#" aria-label="Quince Home">
+          <span class="logo-text">Quince</span>
+        </a>
+      </div>
+
+      <div class="header-right">
+        <div class="header-search" role="search">
+          <input type="search" placeholder="Search" aria-label="Search products">
+          <button class="search-btn" aria-label="Submit search">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Sign In -->
+        <button class="header-icon-btn" aria-label="Sign In">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="7" r="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Sign In</span>
+        </button>
+
+        <!-- Wishlist -->
+        <button class="header-icon-btn" aria-label="Wishlist">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <!-- Cart -->
+        <button class="header-icon-btn" aria-label="Shopping bag">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="3" y1="6" x2="21" y2="6" stroke-linecap="round"/>
+            <path d="M16 10a4 4 0 0 1-8 0" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <div class="header-divider" aria-hidden="true"></div>
+
+        <!-- Region -->
+        <button class="header-icon-btn" aria-label="Select region: US">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>US</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================================================
+       3. NAVIGATION BAR
+       ================================================ -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#">Bestselling Cashmere</a>
+      <a href="#">Linen</a>
+      <a href="#">New Arrivals</a>
+      <a href="#">Best Sellers</a>
+      <a href="#">Women</a>
+      <a href="#">Men</a>
+      <a href="#">Home</a>
+      <a href="#">Baby &amp; Kids</a>
+      <a href="#">Travel</a>
+      <a href="#">Bags &amp; Accessories</a>
+      <a href="#">Jewelry</a>
+      <a href="#">Beauty &amp; Wellness</a>
+      <a href="#">Gifts</a>
+    </div>
+  </nav>
+
+  <!-- ================================================
+       4. HERO / FEATURED COLLECTION
+       ================================================ -->
+  <section class="hero-section" aria-label="Featured collections">
+
+    <!-- Card 1: The Fall It List -->
+    <article class="hero-card">
+      <img
+        src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=800&auto=format&fit=crop&q=80"
+        alt="Woman in elegant trench coat — The Fall It List"
+        loading="eager"
+      >
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <h2>The Fall It List</h2>
+        <a href="#" class="hero-btn">Shop the Collection</a>
+      </div>
+    </article>
+
+    <!-- Card 2: Carryalls with character -->
+    <article class="hero-card">
+      <img
+        src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&auto=format&fit=crop&q=80"
+        alt="Brown leather tote bag — Carryalls with character"
+        loading="eager"
+      >
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <h2>Carryalls with character</h2>
+        <a href="#" class="hero-btn">Shop Bags</a>
+      </div>
+    </article>
+
+    <!-- Card 3: Standout knits -->
+    <article class="hero-card">
+      <img
+        src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&auto=format&fit=crop&q=80"
+        alt="Woman in red cardigan — Standout knits"
+        loading="eager"
+      >
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <h2>Standout knits</h2>
+        <a href="#" class="hero-btn">Shop Sweaters</a>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- ================================================
+       5. CIRCULAR CATEGORY SECTION
+       ================================================ -->
+  <section class="category-section" aria-label="Browse by category">
+    <div class="category-inner">
+
+      <!-- Row 1 -->
+      <div class="category-row">
+
+        <a href="#" class="category-item">
+          <div class="category-img-wrap">
+            <img
+              src="assets/images/sweaters.avif"
+              alt="Sweaters category"
+              loading="lazy"
+            >
+          </div>
+          <span class="category-name">Sweaters</span>
+        </a>
+
+        <a href="#" class="category-item">
+          <div class="category-img-wrap">
+            <img
+              src="assets/images/tops.webp"
+              alt="Tops category"
+              loading="lazy"
+            >
+          </div>
+          <span class="category-name">Tops</span>
+        </a>
+
+        <a href="#" class="category-item">
+          <div class="category-img-wrap">
+            <img
+              src="assets/images/dresses.avif"
+              alt="Dresses category"
+              loading="lazy"
+            >
+          </div>
+          <span class="category-name">Dresses</span>
+        </a>
+
+        <a href="#" class="category-item">
+          <div class="category-img-wrap">
+            <img
+              src="assets/images/bed.avif"
+              alt="Bedding category"
+              loading="lazy"
+            >
+          </div>
+          <span class="category-name">Bedding</span>
+        </a>
+
+        <a href="#" class="category-item">
+          <div class="category-img-wrap">
+            <img
+              src="assets/images/cashmere.avif"
+              alt="Cashmere category"
+              loading="lazy"
+            >
+          </div>
+          <span class="category-name">Cashmere</span>
+        </a>
+
+        <a href="#" class="category-item">
+          <div class="category-img-wrap">
+            <img
+              src="assets/images/bags.avif"
+              alt="Bags category"
+              loading="lazy"
+            >
+          </div>
+          <span class="category-name">Bags</span>
+        </a>
+
+        <a href="#" class="category-item">
+          <div class="category-img-wrap">
+            <img
+              src="assets/images/pants.avif"
+              alt="Pants category"
+              loading="lazy"
+            >
+          </div>
+          <span class="category-name">Pants</span>
+        </a>
+
+      </div><!-- /category-row 1 -->
+
+      <!-- Row 2 -->
+      <div class="category-row">
+
+        <a href="#" class="category-item">
+          <div class="category-img-wrap">
+            <img
+              src="assets/images/furniture.avif"
+              alt="Furniture category"
+              loading="lazy"
+            >
+          </div>
+          <span class="category-name">Furniture</span>
+        </a>
+
+        <a href="#" class="category-item">
+          <div class="category-img-wrap">
+            <img
+              src="assets/images/jewelry.avif"
+              alt="Jewelry category"
+              loading="lazy"
+            >
+          </div>
+          <span class="category-name">Jewelry</span>
+        </a>
+
+        <a href="#" class="category-item">
+          <div class="category-img-wrap">
+            <img
+              src="assets/images/outerware.avif"
+              alt="Outerwear category"
+              loading="lazy"
+            >
+          </div>
+          <span class="category-name">Outerwear</span>
+        </a>
+
+        <a href="#" class="category-item">
+          <div class="category-img-wrap">
+            <img
+              src="assets/images/footwear.avif"
+              alt="Shoes category"
+              loading="lazy"
+            >
+          </div>
+          <span class="category-name">Shoes</span>
+        </a>
+
+        <a href="#" class="category-item">
+          <div class="category-img-wrap">
+            <img
+              src="assets/images/rugs.webp"
+              alt="Rugs category"
+              loading="lazy"
+            >
+          </div>
+          <span class="category-name">Rugs</span>
+        </a>
+
+        <a href="#" class="category-item">
+          <div class="category-img-wrap">
+            <img
+              src="assets/images/skirts.avif"
+              alt="Skirts category"
+              loading="lazy"
+            >
+          </div>
+          <span class="category-name">Skirts</span>
+        </a>
+
+        <a href="#" class="category-item">
+          <div class="category-img-wrap">
+            <img
+              src="assets/images/men.avif"
+              alt="Men category"
+              loading="lazy"
+            >
+          </div>
+          <span class="category-name">Men</span>
+        </a>
+
+      </div><!-- /category-row 2 -->
+
+    </div><!-- /category-inner -->
+
+    <!-- Decorative carousel arrow -->
+    <div class="category-nav-arrow" aria-hidden="true">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <polyline points="9 18 15 12 9 6"/>
+      </svg>
+    </div>
+
+  </section>
+
+  <!-- ================================================
+       6. NEW & NOTEWORTHY SECTION
+       ================================================ -->
+  <div class="section-divider-wrap">
+    <hr>
+  </div>
+
+  <section class="new-noteworthy-section" aria-label="New and Noteworthy products">
+
+    <div class="section-header">
+      <h2 class="section-title">New &amp; Noteworthy</h2>
+      <a href="#" class="shop-now-btn" aria-label="Shop all new arrivals">Shop Now</a>
+    </div>
+
+    <div class="product-grid">
+
+      <!-- Product 1 -->
+      <article class="product-card">
+        <div class="product-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&auto=format&fit=crop&q=75"
+            alt="100% Organic Cotton Striped Henley Sweater"
+            loading="lazy"
+          >
+          <span class="product-badge">New</span>
+          <div class="product-wishlist" aria-label="Add to wishlist">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-name-price">
+            <span class="product-name">100% Organic Cotton Striped Henley Sweater</span>
+            <span class="product-price">$49.90</span>
+          </div>
+          <div class="product-rating">
+            <div class="stars" aria-label="Rating: 4.8 out of 5">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+            <span class="rating-count">4.8</span>
+          </div>
+          <div class="product-swatches" aria-label="Available colors">
+            <span class="swatch" style="background:#4a6741" title="Forest Green"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 2 -->
+      <article class="product-card">
+        <div class="product-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=400&auto=format&fit=crop&q=75"
+            alt="Pumpkin Cardamom Reed Diffuser"
+            loading="lazy"
+          >
+          <span class="product-badge">New</span>
+          <div class="product-wishlist" aria-label="Add to wishlist">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-name-price">
+            <span class="product-name">Pumpkin Cardamom Reed Diffuser</span>
+            <span class="product-price">$30.03</span>
+          </div>
+          <div class="product-rating">
+            <div class="stars" aria-label="Rating: 5 out of 5">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+            <span class="rating-count">5.0</span>
+          </div>
+          <div class="product-swatches" aria-label="Available colors">
+            <span class="swatch" style="background:#e0d0b0" title="Cream"></span>
+            <span class="swatch" style="background:#2a2a2a" title="Black"></span>
+            <span class="swatch" style="background:#c4803a" title="Amber"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 3 -->
+      <article class="product-card">
+        <div class="product-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=400&auto=format&fit=crop&q=75"
+            alt="Faux Fur Maxi Wrap Coat"
+            loading="lazy"
+          >
+          <span class="product-badge">New</span>
+          <div class="product-wishlist" aria-label="Add to wishlist">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-name-price">
+            <span class="product-name">Faux Fur Maxi Wrap Coat</span>
+            <span class="product-price">$130.00</span>
+          </div>
+          <div class="product-rating">
+            <div class="stars" aria-label="Rating: 4.6 out of 5">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star empty">&#9733;</span>
+            </div>
+            <span class="rating-count">4.6</span>
+          </div>
+          <div class="product-swatches" aria-label="Available colors">
+            <span class="swatch" style="background:#1a1a1a" title="Black"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 4 -->
+      <article class="product-card">
+        <div class="product-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1601378235175-90d35fdfd592?w=400&auto=format&fit=crop&q=75"
+            alt="Everyday Cozy Throw"
+            loading="lazy"
+          >
+          <span class="product-badge">New</span>
+          <div class="product-wishlist" aria-label="Add to wishlist">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-name-price">
+            <span class="product-name">Everyday Cozy Throw</span>
+            <span class="product-price">$29.90</span>
+          </div>
+          <div class="product-rating">
+            <div class="stars" aria-label="Rating: 4.8 out of 5">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+            <span class="rating-count">4.8</span>
+          </div>
+          <div class="product-swatches" aria-label="Available colors">
+            <span class="swatch" style="background:#d4c8b8" title="Oat"></span>
+            <span class="swatch" style="background:#a8c4cc" title="Sage Blue"></span>
+            <span class="swatch" style="background:#b8c0c8" title="Gray"></span>
+            <span class="swatch" style="background:#98a890" title="Sage"></span>
+            <span class="swatch" style="background:#8090a0" title="Slate"></span>
+            <span class="swatch" style="background:#b0b8a0" title="Olive"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 5 -->
+      <article class="product-card">
+        <div class="product-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1548624313-0396c75e4b1a?w=400&auto=format&fit=crop&q=75"
+            alt="Comfort Stretch Trench Coat"
+            loading="lazy"
+          >
+          <span class="product-badge">New</span>
+          <div class="product-wishlist" aria-label="Add to wishlist">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-name-price">
+            <span class="product-name">Comfort Stretch Trench Coat</span>
+            <span class="product-price">$104.00</span>
+          </div>
+          <div class="product-rating">
+            <div class="stars" aria-label="Rating: 4.8 out of 5">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+            <span class="rating-count">4.8</span>
+          </div>
+          <div class="product-swatches" aria-label="Available colors">
+            <span class="swatch" style="background:#c4a870" title="Tan"></span>
+            <span class="swatch" style="background:#3a3a3a" title="Charcoal"></span>
+            <span class="swatch" style="background:#1a2840" title="Navy"></span>
+            <span class="swatch" style="background:#1a1a1a" title="Black"></span>
+            <span class="swatch" style="background:#888" title="Gray"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 6 -->
+      <article class="product-card">
+        <div class="product-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&auto=format&fit=crop&q=75"
+            alt="Sutton Shoulder Bag"
+            loading="lazy"
+          >
+          <span class="product-badge">New</span>
+          <div class="product-wishlist" aria-label="Add to wishlist">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-name-price">
+            <span class="product-name">Sutton Shoulder Bag</span>
+            <span class="product-price">$168.00</span>
+          </div>
+          <div class="product-rating">
+            <div class="stars" aria-label="Rating: 4.7 out of 5">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+            <span class="rating-count">4.7</span>
+          </div>
+          <div class="product-swatches" aria-label="Available colors">
+            <span class="swatch" style="background:#2a2a2a" title="Black"></span>
+            <span class="swatch" style="background:#7a4030" title="Cognac"></span>
+            <span class="swatch" style="background:#6a3828" title="Tan"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Row 2 — Products 7–12 -->
+
+      <!-- Product 7 -->
+      <article class="product-card">
+        <div class="product-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=400&auto=format&fit=crop&q=75"
+            alt="Cotton Cashmere Ribbed Long Sleeve V-Neck Midi Dress"
+            loading="lazy"
+          >
+          <span class="product-badge">New</span>
+          <div class="product-wishlist" aria-label="Add to wishlist">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-name-price">
+            <span class="product-name">Cotton Cashmere Ribbed Long Sleeve V-Neck Midi...</span>
+            <span class="product-price">$79.90</span>
+          </div>
+          <div class="product-rating">
+            <div class="stars" aria-label="Rating: 4.7 out of 5">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+            <span class="rating-count">4.7</span>
+          </div>
+          <div class="product-swatches" aria-label="Available colors">
+            <span class="swatch" style="background:#8a4a30" title="Rust"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 8 -->
+      <article class="product-card">
+        <div class="product-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&auto=format&fit=crop&q=75"
+            alt="Italian Leather and Suede Low Profile Sneaker"
+            loading="lazy"
+          >
+          <span class="product-badge">New</span>
+          <div class="product-wishlist" aria-label="Add to wishlist">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-name-price">
+            <span class="product-name">Italian Leather &amp; Suede Low Profile Sneaker</span>
+            <span class="product-price">$99.90</span>
+          </div>
+          <div class="product-rating">
+            <div class="stars" aria-label="Rating: 4.6 out of 5">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star empty">&#9733;</span>
+            </div>
+            <span class="rating-count">4.6</span>
+          </div>
+          <div class="product-swatches" aria-label="Available colors">
+            <span class="swatch" style="background:#e8e0d0" title="White"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 9 -->
+      <article class="product-card">
+        <div class="product-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=75&crop=focalpoint&fp-x=0.5&fp-y=0.5"
+            alt="Wavy Wood Round Wall Mirror"
+            loading="lazy"
+          >
+          <span class="product-badge">New</span>
+          <div class="product-wishlist" aria-label="Add to wishlist">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-name-price">
+            <span class="product-name">Wavy Wood Round Wall Mirror</span>
+            <span class="product-price">$129.00</span>
+          </div>
+          <div class="product-rating">
+            <div class="stars" aria-label="Rating: 4.9 out of 5">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+            <span class="rating-count">4.9</span>
+          </div>
+          <div class="product-swatches" aria-label="Available colors">
+            <span class="swatch" style="background:#c4a060" title="Natural Wood"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 10 -->
+      <article class="product-card">
+        <div class="product-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=400&auto=format&fit=crop&q=75"
+            alt="100% Organic Cotton Cable Crew Cardigan"
+            loading="lazy"
+          >
+          <span class="product-badge">New</span>
+          <div class="product-wishlist" aria-label="Add to wishlist">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-name-price">
+            <span class="product-name">100% Organic Cotton Cable Crew Cardigan</span>
+            <span class="product-price">$69.90</span>
+          </div>
+          <div class="product-rating">
+            <div class="stars" aria-label="Rating: 4.8 out of 5">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+            <span class="rating-count">4.8</span>
+          </div>
+          <div class="product-swatches" aria-label="Available colors">
+            <span class="swatch" style="background:#f5f0e8" title="Ivory"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 11 -->
+      <article class="product-card">
+        <div class="product-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?w=400&auto=format&fit=crop&q=75"
+            alt="Bamboo One Piece Pajama"
+            loading="lazy"
+          >
+          <span class="product-badge">New</span>
+          <div class="product-wishlist" aria-label="Add to wishlist">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-name-price">
+            <span class="product-name">Bamboo One Piece Pajama</span>
+            <span class="product-price">$49.90</span>
+          </div>
+          <div class="product-rating">
+            <div class="stars" aria-label="Rating: 4.9 out of 5">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+            <span class="rating-count">4.9</span>
+          </div>
+          <div class="product-swatches" aria-label="Available colors">
+            <span class="swatch" style="background:#f5f0e8" title="Ivory Floral"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 12 -->
+      <article class="product-card">
+        <div class="product-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1554412933-514a83d2f3c8?w=400&auto=format&fit=crop&q=75"
+            alt="100% Yak Crewneck Sweater Vest"
+            loading="lazy"
+          >
+          <span class="product-badge">New</span>
+          <div class="product-wishlist" aria-label="Add to wishlist">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-name-price">
+            <span class="product-name">100% Yak Crewneck Sweater Vest</span>
+            <span class="product-price">$89.90</span>
+          </div>
+          <div class="product-rating">
+            <div class="stars" aria-label="Rating: 4.8 out of 5">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+            <span class="rating-count">4.8</span>
+          </div>
+          <div class="product-swatches" aria-label="Available colors">
+            <span class="swatch" style="background:#1a1a1a" title="Black"></span>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /product-grid -->
+  </section>
+
+  <!-- ================================================
+       7. FOOTER
+       ================================================ -->
+  <footer class="site-footer">
+
+    <div class="footer-main">
+
+      <!-- Left: Email + App -->
+      <div class="footer-left">
+        <p class="footer-tagline">Offers, new arrivals, restocks and more.</p>
+
+        <form class="footer-email-form" action="#" method="post" onsubmit="return false;">
+          <label for="footer-email">Email Address</label>
+          <input type="email" id="footer-email" name="email" placeholder="EMAIL ADDRESS" autocomplete="email">
+          <button type="submit" class="footer-email-submit" aria-label="Subscribe">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </button>
+        </form>
+
+        <div class="footer-app">
+          <!-- QR Code visual placeholder -->
+          <div class="footer-qr" aria-label="QR code for the Quince app">
+            <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" width="56" height="56">
+              <!-- Top-left finder pattern -->
+              <rect x="2" y="2" width="18" height="18" fill="none" stroke="#000" stroke-width="3"/>
+              <rect x="7" y="7" width="8" height="8" fill="#000"/>
+              <!-- Top-right finder pattern -->
+              <rect x="36" y="2" width="18" height="18" fill="none" stroke="#000" stroke-width="3"/>
+              <rect x="41" y="7" width="8" height="8" fill="#000"/>
+              <!-- Bottom-left finder pattern -->
+              <rect x="2" y="36" width="18" height="18" fill="none" stroke="#000" stroke-width="3"/>
+              <rect x="7" y="41" width="8" height="8" fill="#000"/>
+              <!-- Data modules -->
+              <rect x="24" y="2" width="6" height="6" fill="#000"/>
+              <rect x="24" y="12" width="6" height="6" fill="#000"/>
+              <rect x="24" y="24" width="6" height="6" fill="#000"/>
+              <rect x="24" y="36" width="6" height="6" fill="#000"/>
+              <rect x="24" y="48" width="6" height="4" fill="#000"/>
+              <rect x="36" y="24" width="6" height="6" fill="#000"/>
+              <rect x="48" y="24" width="6" height="4" fill="#000"/>
+              <rect x="36" y="36" width="4" height="4" fill="#000"/>
+              <rect x="44" y="36" width="8" height="4" fill="#000"/>
+              <rect x="36" y="44" width="8" height="4" fill="#000"/>
+              <rect x="48" y="48" width="6" height="4" fill="#000"/>
+            </svg>
+          </div>
+          <div class="footer-app-text">
+            <h4>Get the Quince App</h4>
+            <p>Available on iOS and Android</p>
+          </div>
+        </div>
+      </div><!-- /footer-left -->
+
+      <!-- Col 1: Products -->
+      <div class="footer-col">
+        <h5>Products</h5>
+        <ul>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Jewelry</a></li>
+          <li><a href="#">Gift Cards</a></li>
+          <li><a href="#">Partner Offers</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 2: Quince -->
+      <div class="footer-col">
+        <h5>Quince</h5>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Refer &amp; Earn</a></li>
+          <li><a href="#">How it Works</a></li>
+          <li><a href="#">Our Values</a></li>
+          <li><a href="#">Our Factories</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Cashmere 101</a></li>
+          <li><a href="#">Cookware 101</a></li>
+          <li><a href="#">Leather 101</a></li>
+          <li><a href="#">Silk 101</a></li>
+          <li><a href="#">Bedding 101</a></li>
+          <li><a href="#">Luggage 101</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Service Discount</a></li>
+          <li><a href="#">Educational Discount</a></li>
+          <li><a href="#">Partner Offers</a></li>
+          <li><a href="#">Quince Offers</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Customer Service + Quince Business -->
+      <div class="footer-col footer-col-split">
+        <div class="footer-sub-section">
+          <h5>Customer Service</h5>
+          <ul>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">My Orders</a></li>
+            <li><a href="#">Start a Return</a></li>
+            <li><a href="#">Shipping &amp; Returns</a></li>
+            <li><a href="#">Warranty Policy</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-sub-section">
+          <h5>Quince Business</h5>
+          <ul>
+            <li><a href="#">Business Solutions</a></li>
+            <li><a href="#">Corporate Gifting</a></li>
+            <li><a href="#">Interior Design</a></li>
+            <li><a href="#">White Label</a></li>
+            <li><a href="#">Hospitality</a></li>
+            <li><a href="#">Branded Storefront</a></li>
+            <li><a href="#">Uniforms</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right: Country + Social -->
+      <div class="footer-right">
+        <div class="footer-country">
+          <h5>Country/Region</h5>
+          <div class="country-selector">
+            <span aria-label="United States flag">&#127482;&#127480;</span>
+            <span>United States ($USD)</span>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="footer-follow">
+          <h5>Follow Us</h5>
+          <div class="social-icons">
+            <!-- Facebook -->
+            <a href="#" class="social-icon" aria-label="Follow us on Facebook">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a href="#" class="social-icon" aria-label="Follow us on Instagram">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="#fff" stroke-width="2"/>
+                <circle cx="12" cy="12" r="4" fill="none" stroke="#fff" stroke-width="2"/>
+                <circle cx="17.5" cy="6.5" r="1.5" fill="#fff"/>
+              </svg>
+            </a>
+            <!-- TikTok -->
+            <a href="#" class="social-icon" aria-label="Follow us on TikTok">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.37 6.37 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.83 4.83 0 0 1-1.01-.07z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div><!-- /footer-right -->
+
+    </div><!-- /footer-main -->
+
+    <!-- Footer Logo -->
+    <div class="footer-logo-area">
+      <p class="footer-logo-text">Quince</p>
+      <hr class="footer-logo-divider">
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 Quince. All Rights Reserved.</p>
+      <a href="#">Terms of Service</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Accessibility</a>
+      <a href="#">Referral Policy</a>
+      <a href="#" class="privacy-choices-link">
+        Your Privacy Choices
+        <span class="privacy-badge" aria-label="Privacy options">
+          <span>CA</span>
+        </span>
+      </a>
+      <a href="#">Cookie Management</a>
+    </div>
+
+  </footer>
+
+</body>
+</html>
