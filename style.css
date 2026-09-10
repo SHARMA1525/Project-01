@@ -80,8 +80,9 @@ input {
 .announcement-bar {
   background-color: #f5c9a0;
   text-align: center;
-  padding: 8px 16px;
-  width: 100%;
+  padding: 8px 8px;
+  width: 90%;
+  margin: 0% auto;
 }
 
 .announcement-bar p {
@@ -201,6 +202,7 @@ input {
 .site-nav {
   background-color: #fff;
   border-bottom: 1px solid #e8e8e8;
+  margin: 0% auto;
 }
 
 .nav-inner {
@@ -309,7 +311,7 @@ input {
    7. CATEGORIES
    ---------------------------------------------------------- */
 .category-section {
-  padding: 48px 0 12px;
+  padding: 58px 0 12px;
   position: relative;
 }
 
@@ -322,15 +324,15 @@ input {
 .category-row {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 12px;
-  margin-bottom: 28px;
+  gap: 30px;
+  margin-bottom: 60px;
 }
 
 .category-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   text-decoration: none;
   color: #1a1a1a;
 }
@@ -352,7 +354,7 @@ input {
 }
 
 .category-name {
-  font-size: 12px;
+  font-size: 17px;
   color: #1a1a1a;
   text-align: center;
   letter-spacing: 0.01em;
@@ -395,7 +397,7 @@ input {
 .section-divider-wrap hr {
   border: none;
   border-top: 1px solid #e0e0e0;
-  margin-bottom: 28px;
+  margin-bottom: 60px;
 }
 
 .new-noteworthy-section {
@@ -412,7 +414,7 @@ input {
 }
 
 .section-title {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -1102,5 +1104,295 @@ input {
 
   .category-nav-arrow {
     display: none;
+  }
+}
+
+/* ============================================================
+   NEW SECTIONS — Added sections 1, 2, 3
+   12. Feature Split Sections (Craft of Cashmere / Shades of Season)
+   13. Best Sellers Section
+   14. Mini Product Cards
+   15. Best Sellers Labels
+   16. New Section Responsive
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   12. FEATURE SPLIT SECTION WRAPPER
+   ---------------------------------------------------------- */
+.feature-split-section {
+  background-color: #f7f7f7;
+  padding: 32px 40px;
+}
+
+.feature-split-inner {
+  max-width: 1360px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 55% 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+/* Large featured card — left column with a defined landscape aspect ratio */
+.feature-large-card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  background-color: #d8d0c8;
+  border-radius: 4px;
+}
+
+.feature-large-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.feature-large-card:hover img {
+  transform: scale(1.02);
+}
+
+.feature-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.12) 40%, transparent 65%);
+  pointer-events: none;
+}
+
+.feature-content {
+  position: absolute;
+  bottom: 28px;
+  left: 24px;
+  z-index: 2;
+}
+
+.feature-heading {
+  font-family: "EB Garamond", Georgia, "Times New Roman", Times, serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 6px;
+  letter-spacing: 0.01em;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.35);
+  line-height: 1.2;
+}
+
+.feature-subtext {
+  font-size: 12px;
+  color: rgba(255,255,255,0.88);
+  margin-bottom: 16px;
+  line-height: 1.5;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  font-weight: 300;
+}
+
+/* 3×2 mini product grid — right column */
+.feature-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 12px;
+  background-color: transparent;
+  align-self: start;
+}
+
+/* ----------------------------------------------------------
+   14. MINI PRODUCT CARDS (used in feature split sections)
+   ---------------------------------------------------------- */
+.mini-product-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.mini-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background-color: #f0efed;
+  flex-shrink: 0;
+}
+
+.mini-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.mini-product-card:hover .mini-img-wrap img {
+  transform: scale(1.03);
+}
+
+.mini-product-info {
+  padding: 5px 8px 7px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mini-product-info .product-price {
+  font-size: 11px;
+  font-weight: 400;
+  color: #1a1a1a;
+}
+
+/* ----------------------------------------------------------
+   13. BEST SELLERS SECTION
+   ---------------------------------------------------------- */
+.best-sellers-section {
+  background-color: #fff;
+  padding: 0;
+}
+
+.best-sellers-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 40px 52px;
+}
+
+/* Override grid for best sellers: always 6 columns, single row */
+.bs-grid {
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px 12px;
+}
+
+/* ----------------------------------------------------------
+   15. BEST SELLERS PRODUCT BADGE VARIANTS
+   ---------------------------------------------------------- */
+.bs-label-bundle {
+  background-color: #fff;
+  border-color: #d4d4d4;
+  bottom: 24px;
+  left: 8px;
+}
+
+.bs-label-second {
+  background-color: #fff;
+  border-color: #d4d4d4;
+  bottom: 8px;
+  left: 8px;
+  position: absolute;
+}
+
+.bs-label-exclusive {
+  background-color: #1a1a1a;
+  color: #fff;
+  border-color: transparent;
+  font-size: 9px;
+}
+
+/* Swatch "more" indicator */
+.swatch-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  color: #555;
+  font-weight: 500;
+  letter-spacing: 0;
+  width: auto;
+  height: 12px;
+  border-radius: 0;
+  border: none;
+  padding: 0 1px;
+  background: transparent;
+}
+
+/* ----------------------------------------------------------
+   16. NEW SECTION RESPONSIVE
+   ---------------------------------------------------------- */
+
+/* Tablet landscape (≤ 1100px) */
+@media (max-width: 1100px) {
+  .feature-split-section {
+    padding: 24px 24px;
+  }
+
+  .best-sellers-inner {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .bs-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 14px;
+  }
+
+  .feature-mini-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+}
+
+/* Tablet portrait (≤ 900px) — stack banner above product grid */
+@media (max-width: 900px) {
+  .feature-split-section {
+    padding: 20px 20px;
+  }
+
+  .feature-split-inner {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .feature-large-card {
+    aspect-ratio: 16 / 9;
+  }
+
+  .feature-mini-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .bs-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile (≤ 640px) */
+@media (max-width: 640px) {
+  .feature-split-section {
+    padding: 16px 14px;
+  }
+
+  .feature-large-card {
+    aspect-ratio: 4 / 3;
+  }
+
+  .feature-heading {
+    font-size: 18px;
+  }
+
+  .feature-subtext {
+    font-size: 11px;
+  }
+
+  .feature-content {
+    bottom: 20px;
+    left: 16px;
+  }
+
+  .feature-mini-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .best-sellers-inner {
+    padding: 28px 14px 36px;
+  }
+
+  .bs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 10px;
   }
 }
