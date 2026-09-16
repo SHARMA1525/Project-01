@@ -237,33 +237,99 @@ input {
 /* ----------------------------------------------------------
    6. HERO
    ---------------------------------------------------------- */
+
+/*
+ * .hero-section retains EXACTLY the same outer dimensions as before:
+ *   width: 90%;  margin: 0 auto;
+ * The only change is removing display:grid (now holds one child banner).
+ * The banner uses aspect-ratio: 24/7 which replicates the original height:
+ *   Original height = (section_width / 3) × (7/8)
+ *   Full-width height with same aspect ratio: section_width / (24/7) = section_width × 7/24
+ *   = section_width / 3 × 7/8  ✓ (exact match)
+ */
 .hero-section {
   width: 90%;
-  display: grid;
-  grid-template-columns: 2fr 2fr 2fr;
-  gap: 8px;
   margin: 0 auto;
 }
 
-.hero-card {
+/* ── Banner container: same outer dimensions as old 3-col grid ── */
+.hero-banner {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 8/7;
+  /* aspect-ratio 24/7 = (3 cols × 8/7 per col) — preserves original section height */
+  aspect-ratio: 24 / 7;
+  width: 100%;
+  background-color: #1a1a1a; /* fallback while images load */
 }
 
-.hero-card img {
-  width: 130%;
-  height: 130%;
+/* ── Each slide: absolutely stacked, fills the banner exactly ── */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.hero-slide img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center top;
   display: block;
-  transition: transform 0.4s ease;
 }
 
-.hero-card:hover img {
-  transform: scale(1.02);
+/* ──────────────────────────────────────────────────────────────
+   CSS-only auto-cycling fade animation — 3 slides, 5s each
+   Total cycle = 15s
+   Each slide: visible for ~4s, fades over 1s in/out
+   Keyframe percentages:
+     Slide 1  : 0%–26.67% visible, 26.67%–33.33% fade out
+     Slide 2  : 33.33%–60% visible, 60%–66.67% fade out
+     Slide 3  : 66.67%–93.33% visible, 93.33%–100% fade out → loops
+   ────────────────────────────────────────────────────────────── */
+
+/* Slide 1 — starts immediately */
+@keyframes hero-fade-1 {
+  0%          { opacity: 1; z-index: 2; }
+  26.67%      { opacity: 1; z-index: 2; }   /* hold: 4s visible  */
+  33.33%      { opacity: 0; z-index: 1; }   /* fade out over 1s  */
+  93.34%      { opacity: 0; z-index: 1; }   /* wait while 2,3 show */
+  100%        { opacity: 1; z-index: 2; }   /* start next cycle  */
 }
 
+/* Slide 2 — delayed by 5s */
+@keyframes hero-fade-2 {
+  0%          { opacity: 0; z-index: 1; }
+  33.33%      { opacity: 0; z-index: 1; }   /* wait for slide 1  */
+  33.34%      { opacity: 1; z-index: 2; }   /* become visible    */
+  60%         { opacity: 1; z-index: 2; }   /* hold: 4s visible  */
+  66.67%      { opacity: 0; z-index: 1; }   /* fade out over 1s  */
+  100%        { opacity: 0; z-index: 1; }
+}
+
+/* Slide 3 — delayed by 10s */
+@keyframes hero-fade-3 {
+  0%          { opacity: 0; z-index: 1; }
+  66.67%      { opacity: 0; z-index: 1; }   /* wait for 1 & 2    */
+  66.68%      { opacity: 1; z-index: 2; }   /* become visible    */
+  93.33%      { opacity: 1; z-index: 2; }   /* hold: 4s visible  */
+  100%        { opacity: 0; z-index: 1; }   /* fade out → loop   */
+}
+
+.hero-slide--1 {
+  animation: hero-fade-1 15s ease-in-out infinite;
+}
+
+.hero-slide--2 {
+  animation: hero-fade-2 15s ease-in-out infinite;
+}
+
+.hero-slide--3 {
+  animation: hero-fade-3 15s ease-in-out infinite;
+}
+
+/* ── Slide overlay — identical gradient as original hero cards ── */
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -271,6 +337,7 @@ input {
   pointer-events: none;
 }
 
+/* ── Text content — same position, style as original .hero-content ── */
 .hero-content {
   position: absolute;
   bottom: 24px;
@@ -283,11 +350,27 @@ input {
   font-size: 30px;
   font-weight: 400;
   color: #fff;
-  margin-bottom: 14px;
+  margin-bottom: 8px;
   letter-spacing: 0.01em;
   text-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
 
+/* Supporting text for slides 2 & 3 */
+.hero-subtext {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 14px;
+  line-height: 1.5;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.35);
+  font-weight: 300;
+}
+
+/* Slide 1 has no subtext so keep the existing margin-bottom on h2 for it */
+.hero-slide--1 .hero-content h2 {
+  margin-bottom: 14px;
+}
+
+/* ── CTA button — identical to original .hero-btn ── */
 .hero-btn {
   display: inline-block;
   background-color: #e8875a;
@@ -305,6 +388,47 @@ input {
 .hero-btn:hover {
   background-color: #d4744a;
   color: #fff;
+}
+
+/* ── Slide indicators — subtle dots inside existing banner space ── */
+.hero-indicators {
+  position: absolute;
+  bottom: 14px;
+  right: 20px;
+  display: flex;
+  gap: 6px;
+  z-index: 3;
+}
+
+.hero-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.40);
+}
+
+/* Dot active state synced to the slide animation */
+@keyframes dot-active {
+  0%       { background-color: rgba(255, 255, 255, 0.90); }
+  33.33%   { background-color: rgba(255, 255, 255, 0.90); }
+  40%      { background-color: rgba(255, 255, 255, 0.40); }
+  100%     { background-color: rgba(255, 255, 255, 0.40); }
+}
+
+.hero-dot--1 {
+  animation: dot-active 15s ease-in-out infinite;
+}
+
+.hero-dot--2 {
+  animation: dot-active 15s ease-in-out infinite;
+  animation-delay: 5s;
+  background-color: rgba(255, 255, 255, 0.40);
+}
+
+.hero-dot--3 {
+  animation: dot-active 15s ease-in-out infinite;
+  animation-delay: 10s;
+  background-color: rgba(255, 255, 255, 0.40);
 }
 
 /* ----------------------------------------------------------
@@ -445,7 +569,7 @@ input {
 .product-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 50px 30px;
+  gap: 28px 18px;
 }
 
 .product-card {
@@ -606,7 +730,7 @@ input {
 }
 
 .footer-tagline {
-  font-size: 13px;
+  font-size: 15px;
   color: #c8c8d0;
   line-height: 1.5;
   font-weight: 300;
@@ -634,7 +758,7 @@ input {
   border: none;
   outline: none;
   padding: 0 14px;
-  font-size: 11px;
+  font-size: 13px;
   color: #bbb;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -700,20 +824,20 @@ input {
 }
 
 .footer-app-text h4 {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 400;
   color: #fff;
   margin-bottom: 3px;
 }
 
 .footer-app-text p {
-  font-size: 11px;
+  font-size: 13px;
   color: #999;
 }
 
 /* Footer Columns */
 .footer-col h5 {
-  font-size: 10.5px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -728,7 +852,7 @@ input {
 }
 
 .footer-col ul li a {
-  font-size: 12px;
+  font-size: 14px;
   color: #aaa;
   line-height: 1.4;
   transition: color 0.15s;
@@ -754,7 +878,7 @@ input {
 }
 
 .footer-sub-section h5 {
-  font-size: 10.5px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -769,7 +893,7 @@ input {
 }
 
 .footer-sub-section ul li a {
-  font-size: 12px;
+  font-size: 14px;
   color: #aaa;
   line-height: 1.4;
   transition: color 0.15s;
@@ -788,7 +912,7 @@ input {
 
 .footer-country h5,
 .footer-follow h5 {
-  font-size: 10.5px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -800,7 +924,7 @@ input {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 12px;
+  font-size: 14px;
   color: #aaa;
   cursor: pointer;
 }
@@ -876,12 +1000,12 @@ input {
 }
 
 .footer-bottom p {
-  font-size: 11px;
+  font-size: 13px;
   color: #666;
 }
 
 .footer-bottom a {
-  font-size: 11px;
+  font-size: 13px;
   color: #888;
   white-space: nowrap;
   transition: color 0.15s;
@@ -964,15 +1088,6 @@ input {
 }
 
 @media (max-width: 900px) {
-  .hero-section {
-    grid-template-columns: 1fr;
-    gap: 2px;
-  }
-
-  .hero-card {
-    aspect-ratio: 4 / 3;
-  }
-
   .category-row {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -1029,12 +1144,17 @@ input {
     display: none;
   }
 
-  .hero-card {
-    aspect-ratio: 3 / 2.2;
-  }
-
   .hero-content h2 {
     font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .hero-slide--1 .hero-content h2 {
+    margin-bottom: 10px;
+  }
+
+  .hero-subtext {
+    font-size: 11px;
     margin-bottom: 10px;
   }
 

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Quince - Shop our full range of premium categories including cashmere, linen, bags, shoes and more.">
+  <title>Quince | Category</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="category-page.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    .logo-text {
+      font-family: "EB Garamond", Georgia, serif;
+      font-size: 28px;
+    }
+    .footer-logo-text {
+      font-family: "EB Garamond", Georgia, serif;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar" role="banner">
+    <p>Free shipping &amp; easy returns for 365 days.</p>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <a href="index.html" aria-label="Quince Home">
+          <span class="logo-text">Quince</span>
+        </a>
+      </div>
+
+      <div class="header-right">
+        <div class="header-search" role="search">
+          <input type="search" placeholder="Search" aria-label="Search products">
+          <button class="search-btn" aria-label="Submit search">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Sign In -->
+        <button class="header-icon-btn" aria-label="Sign In">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="7" r="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Sign In</span>
+        </button>
+
+        <!-- Wishlist -->
+        <button class="header-icon-btn" aria-label="Wishlist">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <!-- Cart -->
+        <button class="header-icon-btn" aria-label="Shopping bag">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="3" y1="6" x2="21" y2="6" stroke-linecap="round"/>
+            <path d="M16 10a4 4 0 0 1-8 0" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <div class="header-divider" aria-hidden="true"></div>
+
+        <!-- Region -->
+        <button class="header-icon-btn" aria-label="Select region: US">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>US</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="category.html?category=cashmere">Bestselling Cashmere</a>
+      <a href="#">Linen</a>
+      <a href="#">New Arrivals</a>
+      <a href="#">Best Sellers</a>
+      <a href="category.html?category=tops">Women</a>
+      <a href="category.html?category=men">Men</a>
+      <a href="category.html?category=bedding">Home</a>
+      <a href="#">Baby &amp; Kids</a>
+      <a href="#">Travel</a>
+      <a href="category.html?category=bags">Bags &amp; Accessories</a>
+      <a href="category.html?category=jewelry">Jewelry</a>
+      <a href="#">Beauty &amp; Wellness</a>
+      <a href="#">Gifts</a>
+    </div>
+  </nav>
+
+  <!-- ================================================
+       CATEGORY PAGE MAIN CONTENT (populated by JS)
+       ================================================ -->
+  <main class="cat-main" id="catMain">
+
+    <!-- Breadcrumb -->
+    <nav class="cat-breadcrumb" id="catBreadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Women</a>
+      <span class="bc-sep">/</span>
+      <span class="bc-current">Category</span>
+    </nav>
+
+    <!-- Category Title -->
+    <h1 class="cat-title" id="catTitle">LOADING…</h1>
+
+    <!-- Subcategory Circles -->
+    <div class="cat-circles-section">
+      <div class="cat-circles-wrapper">
+        <div class="cat-circles-track" id="catCirclesTrack" role="list" aria-label="Browse subcategories">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+      <button class="cat-circles-arrow" id="catCirclesArrow" aria-label="Scroll categories right">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="cat-filter-bar" role="toolbar" aria-label="Filter and sort products">
+      <div class="cat-filter-left" id="catFilterLeft">
+        <!-- Populated by JS -->
+      </div>
+      <div class="cat-filter-right" id="catFilterRight">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="cat-product-grid" id="catProductGrid" role="list" aria-label="Products">
+      <!-- Populated by JS -->
+    </div>
+
+    <!-- Load More -->
+    <div class="cat-load-more-wrap" id="catLoadMoreWrap" style="display:none;">
+      <button class="cat-load-more" id="catLoadMoreBtn" aria-label="Load more products">
+        Load More
+      </button>
+    </div>
+
+  </main>
+
+  <!-- ================================================
+       FOOTER (identical to homepage)
+       ================================================ -->
+  <footer class="site-footer">
+
+    <div class="footer-main">
+
+      <!-- Left: Email + App -->
+      <div class="footer-left">
+        <p class="footer-tagline">Offers, new arrivals, restocks and more.</p>
+
+        <form class="footer-email-form" action="#" method="post" onsubmit="return false;">
+          <label for="footer-email-cat">Email Address</label>
+          <input type="email" id="footer-email-cat" name="email" placeholder="EMAIL ADDRESS" autocomplete="email">
+          <button type="submit" class="footer-email-submit" aria-label="Subscribe">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </button>
+        </form>
+
+        <div class="footer-app">
+          <div class="footer-qr" aria-label="QR code for the Quince app">
+            <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" width="56" height="56">
+              <rect x="2" y="2" width="18" height="18" fill="none" stroke="#000" stroke-width="3"/>
+              <rect x="7" y="7" width="8" height="8" fill="#000"/>
+              <rect x="36" y="2" width="18" height="18" fill="none" stroke="#000" stroke-width="3"/>
+              <rect x="41" y="7" width="8" height="8" fill="#000"/>
+              <rect x="2" y="36" width="18" height="18" fill="none" stroke="#000" stroke-width="3"/>
+              <rect x="7" y="41" width="8" height="8" fill="#000"/>
+              <rect x="24" y="2" width="6" height="6" fill="#000"/>
+              <rect x="24" y="12" width="6" height="6" fill="#000"/>
+              <rect x="24" y="24" width="6" height="6" fill="#000"/>
+              <rect x="24" y="36" width="6" height="6" fill="#000"/>
+              <rect x="24" y="48" width="6" height="4" fill="#000"/>
+              <rect x="36" y="24" width="6" height="6" fill="#000"/>
+              <rect x="48" y="24" width="6" height="4" fill="#000"/>
+              <rect x="36" y="36" width="4" height="4" fill="#000"/>
+              <rect x="44" y="36" width="8" height="4" fill="#000"/>
+              <rect x="36" y="44" width="8" height="4" fill="#000"/>
+              <rect x="48" y="48" width="6" height="4" fill="#000"/>
+            </svg>
+          </div>
+          <div class="footer-app-text">
+            <h4>Get the Quince App</h4>
+            <p>Available on iOS and Android</p>
+          </div>
+        </div>
+      </div><!-- /footer-left -->
+
+      <!-- Col 1: Products -->
+      <div class="footer-col">
+        <h5>Products</h5>
+        <ul>
+          <li><a href="category.html?category=men">Men</a></li>
+          <li><a href="category.html?category=tops">Women</a></li>
+          <li><a href="category.html?category=bedding">Home</a></li>
+          <li><a href="category.html?category=jewelry">Jewelry</a></li>
+          <li><a href="#">Gift Cards</a></li>
+          <li><a href="#">Partner Offers</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 2: Quince -->
+      <div class="footer-col">
+        <h5>Quince</h5>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Refer &amp; Earn</a></li>
+          <li><a href="#">How it Works</a></li>
+          <li><a href="#">Our Values</a></li>
+          <li><a href="#">Our Factories</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Cashmere 101</a></li>
+          <li><a href="#">Cookware 101</a></li>
+          <li><a href="#">Leather 101</a></li>
+          <li><a href="#">Silk 101</a></li>
+          <li><a href="#">Bedding 101</a></li>
+          <li><a href="#">Luggage 101</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Service Discount</a></li>
+          <li><a href="#">Educational Discount</a></li>
+          <li><a href="#">Partner Offers</a></li>
+          <li><a href="#">Quince Offers</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Customer Service + Quince Business -->
+      <div class="footer-col footer-col-split">
+        <div class="footer-sub-section">
+          <h5>Customer Service</h5>
+          <ul>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">My Orders</a></li>
+            <li><a href="#">Start a Return</a></li>
+            <li><a href="#">Shipping &amp; Returns</a></li>
+            <li><a href="#">Warranty Policy</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-sub-section">
+          <h5>Quince Business</h5>
+          <ul>
+            <li><a href="#">Business Solutions</a></li>
+            <li><a href="#">Corporate Gifting</a></li>
+            <li><a href="#">Interior Design</a></li>
+            <li><a href="#">White Label</a></li>
+            <li><a href="#">Hospitality</a></li>
+            <li><a href="#">Branded Storefront</a></li>
+            <li><a href="#">Uniforms</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right: Country + Social -->
+      <div class="footer-right">
+        <div class="footer-country">
+          <h5>Country/Region</h5>
+          <div class="country-selector">
+            <span aria-label="United States flag">&#127482;&#127480;</span>
+            <span>United States ($USD)</span>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="footer-follow">
+          <h5>Follow Us</h5>
+          <div class="social-icons">
+            <a href="#" class="social-icon" aria-label="Follow us on Facebook">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Follow us on Instagram">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="#fff" stroke-width="2"/>
+                <circle cx="12" cy="12" r="4" fill="none" stroke="#fff" stroke-width="2"/>
+                <circle cx="17.5" cy="6.5" r="1.5" fill="#fff"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Follow us on TikTok">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.37 6.37 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.83 4.83 0 0 1-1.01-.07z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div><!-- /footer-right -->
+
+    </div><!-- /footer-main -->
+
+    <!-- Footer Logo -->
+    <div class="footer-logo-area">
+      <p class="footer-logo-text">Quince</p>
+      <hr class="footer-logo-divider">
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 Quince. All Rights Reserved.</p>
+      <a href="#">Terms of Service</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Accessibility</a>
+      <a href="#">Referral Policy</a>
+      <a href="#" class="privacy-choices-link">
+        Your Privacy Choices
+        <span class="privacy-badge" aria-label="Privacy options">
+          <span>CA</span>
+        </span>
+      </a>
+      <a href="#">Cookie Management</a>
+    </div>
+
+  </footer>
+
+  <!-- Category JS -->
+  <script src="category.js"></script>
+
+</body>
+</html>

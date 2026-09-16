@@ -1,0 +1,968 @@
+/* ============================================================
+   QUINCE — CATEGORY / PRODUCT LISTING PAGE STYLES
+   Extends style.css. Only add rules needed for category.html.
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   CATEGORY PAGE — MAIN WRAPPER
+   ---------------------------------------------------------- */
+.cat-main {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px 60px;
+}
+
+/* ----------------------------------------------------------
+   BREADCRUMB
+   ---------------------------------------------------------- */
+.cat-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 0 12px;
+  font-size: 12px;
+  color: #888;
+  letter-spacing: 0.01em;
+}
+
+.cat-breadcrumb a {
+  color: #888;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.cat-breadcrumb a:hover {
+  color: #1a1a1a;
+}
+
+.cat-breadcrumb .bc-sep {
+  color: #ccc;
+  font-size: 11px;
+}
+
+.cat-breadcrumb .bc-current {
+  color: #1a1a1a;
+}
+
+/* ----------------------------------------------------------
+   CATEGORY TITLE
+   ---------------------------------------------------------- */
+.cat-title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* ----------------------------------------------------------
+   CATEGORY CIRCLES (sub-navigation)
+   ---------------------------------------------------------- */
+.cat-circles-section {
+  position: relative;
+  margin-bottom: 0;
+}
+
+.cat-circles-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.cat-circles-track {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 12px;
+  scroll-behavior: smooth;
+}
+
+.cat-circles-track::-webkit-scrollbar {
+  display: none;
+}
+
+.cat-circle-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  min-width: 88px;
+  max-width: 88px;
+  padding: 4px 0;
+  text-decoration: none;
+  color: #1a1a1a;
+  -webkit-tap-highlight-color: transparent;
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+
+.cat-circle-img-wrap {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #f0ede8;
+  border: 2px solid transparent;
+  transition: border-color 0.2s;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.cat-circle-item.is-active .cat-circle-img-wrap {
+  border-color: #1a1a1a;
+}
+
+.cat-circle-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.cat-circle-name {
+  font-size: 11px;
+  color: #1a1a1a;
+  text-align: center;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+  max-width: 80px;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* Scroll arrow button */
+.cat-circles-arrow {
+  position: absolute;
+  right: -12px;
+  top: 32px;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #d4d4d4;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+  z-index: 2;
+  font-size: 16px;
+  color: #1a1a1a;
+  transition: box-shadow 0.2s;
+}
+
+.cat-circles-arrow:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+.cat-circles-arrow svg {
+  width: 14px;
+  height: 14px;
+  stroke: #1a1a1a;
+  fill: none;
+  stroke-width: 2;
+}
+
+/* ----------------------------------------------------------
+   FILTER BAR
+   ---------------------------------------------------------- */
+.cat-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 24px;
+  gap: 12px;
+}
+
+.cat-filter-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cat-filter-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.cat-item-count {
+  font-size: 12px;
+  color: #888;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+/* Filter pill buttons */
+.fp {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid #d4d4d4;
+  border-radius: 50px;
+  padding: 5px 12px;
+  font-size: 12px;
+  background: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+  color: #1a1a1a;
+  transition: border-color 0.15s, background 0.15s;
+  font-family: inherit;
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+}
+
+.fp:hover {
+  border-color: #aaa;
+}
+
+.fp.fp--active {
+  border-color: #1a1a1a;
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.fp.fp--active .fp-caret {
+  stroke: #fff;
+}
+
+.fp-icon {
+  width: 13px;
+  height: 13px;
+  stroke: #1a1a1a;
+  fill: none;
+  stroke-width: 1.8;
+  flex-shrink: 0;
+}
+
+.fp-caret {
+  width: 11px;
+  height: 11px;
+  stroke: #1a1a1a;
+  fill: none;
+  stroke-width: 2;
+  flex-shrink: 0;
+}
+
+/* Filter dropdown panel */
+.fp-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.fp-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 200px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  z-index: 200;
+  padding: 12px 0;
+}
+
+.fp-dropdown.is-open {
+  display: block;
+}
+
+.fp-dropdown-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  color: #1a1a1a;
+  transition: background 0.1s;
+}
+
+.fp-dropdown-option:hover {
+  background: #f5f3f0;
+}
+
+.fp-dropdown-option input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  accent-color: #1a1a1a;
+  flex-shrink: 0;
+}
+
+/* ----------------------------------------------------------
+   PRODUCT GRID (category page — 4 columns)
+   ---------------------------------------------------------- */
+.cat-product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px 20px;
+}
+
+/* ----------------------------------------------------------
+   CATEGORY PRODUCT CARD
+   ---------------------------------------------------------- */
+.cat-product-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+.cat-product-card:hover .cat-product-img img {
+  transform: scale(1.04);
+}
+
+.cat-product-img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background-color: #f0ede8;
+  flex-shrink: 0;
+}
+
+.cat-product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Heart / wishlist */
+.cat-heart-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 2;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.cat-heart-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: rgba(0,0,0,0.55);
+  fill: rgba(255,255,255,0.6);
+  stroke-width: 1.5;
+  transition: stroke 0.15s, fill 0.15s;
+}
+
+.cat-heart-btn.is-liked svg {
+  stroke: #c0392b;
+  fill: #c0392b;
+}
+
+.cat-heart-btn:hover svg {
+  stroke: #c0392b;
+}
+
+/* Product badge */
+.cat-badge {
+  position: absolute;
+  bottom: 9px;
+  left: 9px;
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(0,0,0,0.08);
+  font-size: 10px;
+  font-weight: 400;
+  padding: 2px 7px;
+  border-radius: 2px;
+  color: #1a1a1a;
+  letter-spacing: 0.01em;
+  pointer-events: none;
+}
+
+.cat-badge--bestseller {
+  background: rgba(255,255,255,0.92);
+  color: #1a1a1a;
+}
+
+.cat-badge--backstock {
+  background: rgba(255,255,255,0.92);
+  color: #1a1a1a;
+}
+
+/* Product info below image */
+.cat-product-info {
+  padding: 8px 0 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.cat-product-name-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.cat-product-name {
+  font-size: 12px;
+  color: #1a1a1a;
+  line-height: 1.4;
+  flex: 1;
+  letter-spacing: 0.01em;
+}
+
+.cat-product-price {
+  font-size: 12px;
+  color: #1a1a1a;
+  font-weight: 400;
+  white-space: nowrap;
+  flex-shrink: 0;
+  letter-spacing: 0.01em;
+}
+
+/* Rating row */
+.cat-product-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 2px;
+}
+
+.cat-stars {
+  display: flex;
+  gap: 1px;
+  align-items: center;
+}
+
+.cat-star {
+  font-size: 10px;
+  line-height: 1;
+  color: #e8875a;
+}
+
+.cat-star.empty {
+  color: #ddd;
+}
+
+.cat-rating-count {
+  font-size: 10px;
+  color: #888;
+  letter-spacing: 0.01em;
+}
+
+/* Color swatches */
+.cat-swatches {
+  display: flex;
+  gap: 4px;
+  margin-top: 5px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.cat-swatch {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.12);
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.cat-swatch:hover {
+  transform: scale(1.2);
+}
+
+.cat-swatch-more {
+  font-size: 10px;
+  color: #555;
+  font-weight: 500;
+  padding: 0 2px;
+  letter-spacing: 0;
+}
+
+/* ----------------------------------------------------------
+   LOAD MORE BUTTON
+   ---------------------------------------------------------- */
+.cat-load-more-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 48px 0 0;
+}
+
+.cat-load-more {
+  border: 1px solid #1a1a1a;
+  border-radius: 50px;
+  padding: 12px 40px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  font-family: inherit;
+}
+
+.cat-load-more:hover {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+/* ----------------------------------------------------------
+   EMPTY STATE
+   ---------------------------------------------------------- */
+.cat-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 80px 0;
+  color: #888;
+  font-size: 15px;
+}
+
+/* ----------------------------------------------------------
+   RESPONSIVE
+   ---------------------------------------------------------- */
+@media (max-width: 1100px) {
+  .cat-main {
+    padding: 0 24px 60px;
+  }
+  .cat-product-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .cat-product-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px 12px;
+  }
+  .cat-filter-bar {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 640px) {
+  .cat-main {
+    padding: 0 14px 40px;
+  }
+  .cat-title {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+  .cat-product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 10px;
+  }
+  .cat-filter-bar {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .cat-filter-left {
+    gap: 6px;
+  }
+  .cat-circle-item {
+    min-width: 72px;
+    max-width: 72px;
+  }
+  .cat-circle-img-wrap {
+    width: 64px;
+    height: 64px;
+  }
+  .cat-circles-arrow {
+    display: none;
+  }
+}
+
+/* ============================================================
+   FILTER DRAWER — RIGHT-SIDE PANEL
+   All rules scoped to .fdr-* to avoid any collisions.
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   OVERLAY
+   ---------------------------------------------------------- */
+.fdr-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.28);
+  z-index: 900;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.32s ease;
+}
+.fdr-overlay.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ----------------------------------------------------------
+   DRAWER PANEL
+   ---------------------------------------------------------- */
+.fdr-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50vw;
+  min-width: 320px;
+  max-width: 860px;
+  background: #fff;
+  z-index: 901;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.36s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  box-shadow: -4px 0 32px rgba(0,0,0,0.10);
+}
+.fdr-panel.is-open {
+  transform: translateX(0);
+}
+
+/* ----------------------------------------------------------
+   DRAWER HEADER
+   ---------------------------------------------------------- */
+.fdr-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 48px 20px;
+  flex-shrink: 0;
+  border-bottom: none;
+}
+.fdr-title {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+.fdr-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a1a1a;
+  transition: opacity 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+.fdr-close:hover {
+  opacity: 0.5;
+}
+.fdr-close svg {
+  width: 18px;
+  height: 18px;
+  stroke: #1a1a1a;
+  stroke-width: 1.5;
+  fill: none;
+}
+
+/* ----------------------------------------------------------
+   SCROLLABLE BODY
+   ---------------------------------------------------------- */
+.fdr-body {
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  padding: 10px 48px 30px;
+}
+
+/* ----------------------------------------------------------
+   ACCORDION SECTIONS
+   ---------------------------------------------------------- */
+.fdr-section {
+  border-bottom: none;
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto 16px;
+}
+.fdr-section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+.fdr-section-head:hover {
+  background: none;
+}
+.fdr-section-label {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  user-select: none;
+}
+.fdr-section-arrow {
+  width: 12px;
+  height: 12px;
+  stroke: #1a1a1a;
+  fill: none;
+  stroke-width: 1.6;
+  flex-shrink: 0;
+  transition: transform 0.22s ease;
+}
+.fdr-section.is-open .fdr-section-arrow {
+  transform: rotate(180deg);
+}
+.fdr-section-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.32s ease, opacity 0.25s ease, padding 0.25s ease;
+  opacity: 0;
+  padding: 0;
+}
+.fdr-section.is-open .fdr-section-body {
+  max-height: 1600px;
+  opacity: 1;
+  padding: 10px 0 24px;
+}
+
+/* ----------------------------------------------------------
+   OPTION BUTTONS — rectangular outlined
+   ---------------------------------------------------------- */
+.fdr-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 14px;
+}
+.fdr-opt-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: auto;
+  flex: 0 0 auto;
+  padding: 9px 15px;
+  border: 1px solid #d4d4d4;
+  border-radius: 0;
+  background: #fff;
+  cursor: pointer;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 10.5px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  text-align: center;
+  white-space: nowrap;
+  transition: border-color 0.15s;
+  -webkit-tap-highlight-color: transparent;
+  line-height: 1.3;
+}
+.fdr-opt-btn:hover {
+  border-color: #999;
+}
+.fdr-opt-btn.is-selected {
+  border-color: #1a1a1a;
+  border-width: 1.5px;
+  font-weight: 400;
+}
+
+/* ----------------------------------------------------------
+   COLOR OPTIONS — wrap freely, swatch + label side by side
+   ---------------------------------------------------------- */
+.fdr-colors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 14px;
+}
+.fdr-color-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+  padding: 8px 14px;
+  border: 1px solid #d4d4d4;
+  border-radius: 0;
+  background: #fff;
+  cursor: pointer;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 10.5px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  white-space: nowrap;
+  transition: border-color 0.15s;
+  -webkit-tap-highlight-color: transparent;
+  line-height: 1.3;
+}
+.fdr-color-btn:hover {
+  border-color: #999;
+}
+.fdr-color-btn.is-selected {
+  border-color: #1a1a1a;
+  border-width: 1.5px;
+  font-weight: 400;
+}
+.fdr-color-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 0;
+  border: 1px solid rgba(0,0,0,0.14);
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+/* ----------------------------------------------------------
+   SIZE OPTIONS — wrap freely, each size its natural width
+   ---------------------------------------------------------- */
+.fdr-sizes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 14px;
+}
+.fdr-size-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  padding: 9px 15px;
+  border: 1px solid #d4d4d4;
+  border-radius: 0;
+  background: #fff;
+  cursor: pointer;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 10.5px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  white-space: nowrap;
+  text-align: center;
+  transition: border-color 0.15s;
+  -webkit-tap-highlight-color: transparent;
+  line-height: 1.3;
+}
+.fdr-size-btn:hover {
+  border-color: #999;
+}
+.fdr-size-btn.is-selected {
+  border-color: #1a1a1a;
+  border-width: 1.5px;
+  font-weight: 400;
+}
+
+/* ----------------------------------------------------------
+   DRAWER FOOTER
+   ---------------------------------------------------------- */
+.fdr-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 48px;
+  border-top: 1px solid #f0f0f0;
+  flex-shrink: 0;
+  gap: 14px;
+  background: #fff;
+}
+.fdr-clear-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #888;
+  text-decoration: underline;
+  padding: 0;
+  transition: color 0.15s;
+  -webkit-tap-highlight-color: transparent;
+  flex-shrink: 0;
+}
+.fdr-clear-btn:hover {
+  color: #1a1a1a;
+}
+.fdr-apply-btn {
+  flex: 1;
+  max-width: 200px;
+  padding: 12px 20px;
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.18s;
+  -webkit-tap-highlight-color: transparent;
+}
+.fdr-apply-btn:hover {
+  background: #333;
+}
+
+/* ----------------------------------------------------------
+   LOCK scroll on body while drawer is open
+   ---------------------------------------------------------- */
+body.fdr-open {
+  overflow: hidden;
+}
+
+/* ----------------------------------------------------------
+   MOBILE & TABLET RESPONSIVE
+   ---------------------------------------------------------- */
+@media (max-width: 768px) {
+  .fdr-panel {
+    width: 100vw;
+    max-width: 100vw;
+  }
+  .fdr-header {
+    padding: 20px 20px 16px;
+  }
+  .fdr-body {
+    padding: 8px 20px 30px;
+  }
+  .fdr-section {
+    max-width: 100%;
+  }
+  .fdr-options,
+  .fdr-colors,
+  .fdr-sizes {
+    gap: 10px;
+  }
+  .fdr-footer {
+    padding: 16px 20px;
+  }
+}
+

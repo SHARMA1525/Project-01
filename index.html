@@ -105,50 +105,63 @@
   </nav>
 
   <!-- ================================================
-       4. HERO / FEATURED COLLECTION
+       4. HERO / FEATURED COLLECTION — Auto-cycling banner
        ================================================ -->
   <section class="hero-section" aria-label="Featured collections">
 
-    <!-- Card 1: The Fall It List -->
-    <article class="hero-card">
-      <img
-        src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=800&auto=format&fit=crop&q=80"
-        alt="Woman in elegant trench coat — The Fall It List"
-        loading="eager"
-      >
-      <div class="hero-overlay" aria-hidden="true"></div>
-      <div class="hero-content">
-        <h2>The Fall It List</h2>
-        <a href="#" class="hero-btn">Shop the Collection</a>
-      </div>
-    </article>
+    <article class="hero-banner" aria-label="Promotional banner — automatically cycling slides">
 
-    <!-- Card 2: Carryalls with character -->
-    <article class="hero-card">
-      <img
-        src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&auto=format&fit=crop&q=80"
-        alt="Brown leather tote bag — Carryalls with character"
-        loading="eager"
-      >
-      <div class="hero-overlay" aria-hidden="true"></div>
-      <div class="hero-content">
-        <h2>Carryalls with character</h2>
-        <a href="#" class="hero-btn">Shop Bags</a>
+      <!-- Slide 1: The Fall It List (existing hero preserved) -->
+      <div class="hero-slide hero-slide--1">
+        <img
+          src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1600&auto=format&fit=crop&q=80"
+          alt="Woman in elegant trench coat — The Fall It List"
+          loading="eager"
+        >
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+          <h2>The Fall It List</h2>
+          <a href="#" class="hero-btn">Shop the Collection</a>
+        </div>
       </div>
-    </article>
 
-    <!-- Card 3: Standout knits -->
-    <article class="hero-card">
-      <img
-        src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&auto=format&fit=crop&q=80"
-        alt="Woman in red cardigan — Standout knits"
-        loading="eager"
-      >
-      <div class="hero-overlay" aria-hidden="true"></div>
-      <div class="hero-content">
-        <h2>Standout knits</h2>
-        <a href="#" class="hero-btn">Shop Sweaters</a>
+      <!-- Slide 2: Timeless Essentials -->
+      <div class="hero-slide hero-slide--2">
+        <img
+          src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1600&auto=format&fit=crop&q=80"
+          alt="Woman in a classic camel coat — Timeless Essentials"
+          loading="lazy"
+        >
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+          <h2>Timeless Essentials</h2>
+          <p class="hero-subtext">Premium materials. Effortless everyday style.</p>
+          <a href="#" class="hero-btn">Shop Now</a>
+        </div>
       </div>
+
+      <!-- Slide 3: New Season, New Layers -->
+      <div class="hero-slide hero-slide--3">
+        <img
+          src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600&auto=format&fit=crop&q=80"
+          alt="Model in layered autumn fashion — New Season, New Layers"
+          loading="lazy"
+        >
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+          <h2>New Season, New Layers</h2>
+          <p class="hero-subtext">Thoughtfully designed pieces for every day.</p>
+          <a href="#" class="hero-btn">Explore Now</a>
+        </div>
+      </div>
+
+      <!-- Slide indicators (purely decorative, no JS) -->
+      <div class="hero-indicators" aria-hidden="true">
+        <span class="hero-dot hero-dot--1"></span>
+        <span class="hero-dot hero-dot--2"></span>
+        <span class="hero-dot hero-dot--3"></span>
+      </div>
+
     </article>
 
   </section>
@@ -162,7 +175,7 @@
       <!-- Row 1 -->
       <div class="category-row">
 
-        <a href="#" class="category-item">
+        <a href="category.html?category=sweaters" class="category-item">
           <div class="category-img-wrap">
             <img
               src="assets/images/sweaters.avif"
@@ -173,7 +186,7 @@
           <span class="category-name">Sweaters</span>
         </a>
 
-        <a href="#" class="category-item">
+        <a href="category.html?category=tops" class="category-item">
           <div class="category-img-wrap">
             <img
               src="assets/images/tops.webp"
@@ -184,7 +197,7 @@
           <span class="category-name">Tops</span>
         </a>
 
-        <a href="#" class="category-item">
+        <a href="category.html?category=dresses" class="category-item">
           <div class="category-img-wrap">
             <img
               src="assets/images/dresses.avif"
@@ -195,7 +208,7 @@
           <span class="category-name">Dresses</span>
         </a>
 
-        <a href="#" class="category-item">
+        <a href="category.html?category=bedding" class="category-item">
           <div class="category-img-wrap">
             <img
               src="assets/images/bed.avif"
@@ -206,7 +219,7 @@
           <span class="category-name">Bedding</span>
         </a>
 
-        <a href="#" class="category-item">
+        <a href="category.html?category=cashmere" class="category-item">
           <div class="category-img-wrap">
             <img
               src="assets/images/cashmere.avif"
@@ -217,7 +230,7 @@
           <span class="category-name">Cashmere</span>
         </a>
 
-        <a href="#" class="category-item">
+        <a href="category.html?category=bags" class="category-item">
           <div class="category-img-wrap">
             <img
               src="assets/images/bags.avif"
@@ -228,7 +241,7 @@
           <span class="category-name">Bags</span>
         </a>
 
-        <a href="#" class="category-item">
+        <a href="category.html?category=pants" class="category-item">
           <div class="category-img-wrap">
             <img
               src="assets/images/pants.avif"
@@ -244,7 +257,7 @@
       <!-- Row 2 -->
       <div class="category-row">
 
-        <a href="#" class="category-item">
+        <a href="category.html?category=furniture" class="category-item">
           <div class="category-img-wrap">
             <img
               src="assets/images/furniture.avif"
@@ -255,7 +268,7 @@
           <span class="category-name">Furniture</span>
         </a>
 
-        <a href="#" class="category-item">
+        <a href="category.html?category=jewelry" class="category-item">
           <div class="category-img-wrap">
             <img
               src="assets/images/jewelry.avif"
@@ -266,7 +279,7 @@
           <span class="category-name">Jewelry</span>
         </a>
 
-        <a href="#" class="category-item">
+        <a href="category.html?category=outerwear" class="category-item">
           <div class="category-img-wrap">
             <img
               src="assets/images/outerware.avif"
@@ -277,7 +290,7 @@
           <span class="category-name">Outerwear</span>
         </a>
 
-        <a href="#" class="category-item">
+        <a href="category.html?category=shoes" class="category-item">
           <div class="category-img-wrap">
             <img
               src="assets/images/footwear.avif"
@@ -288,7 +301,7 @@
           <span class="category-name">Shoes</span>
         </a>
 
-        <a href="#" class="category-item">
+        <a href="category.html?category=rugs" class="category-item">
           <div class="category-img-wrap">
             <img
               src="assets/images/rugs.webp"
@@ -299,7 +312,7 @@
           <span class="category-name">Rugs</span>
         </a>
 
-        <a href="#" class="category-item">
+        <a href="category.html?category=skirts" class="category-item">
           <div class="category-img-wrap">
             <img
               src="assets/images/skirts.avif"
@@ -310,7 +323,7 @@
           <span class="category-name">Skirts</span>
         </a>
 
-        <a href="#" class="category-item">
+        <a href="category.html?category=men" class="category-item">
           <div class="category-img-wrap">
             <img
               src="assets/images/men.avif"
